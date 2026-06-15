@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Montserrat', sans-serif; }
+        .bg-gradient-spa { background: linear-gradient(135deg, #f5f5f4 0%, #e7e5e4 100%); }
+    </style>
+</head>
+<body class="bg-stone-50 text-slate-800">
+
+    <!-- WhatsApp Flotante con efecto pulse -->
+    <a href="https://wa.me/527773027495?text=Hola,%20quiero%20agendar%20una%20cita" 
+       class="fixed bottom-8 right-8 bg-green-500 text-white p-4 rounded-full shadow-2xl hover:bg-green-600 transition-all z-[999] text-3xl animate-bounce hover:animate-none">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <!-- Navbar Sticky -->
+    <nav class="fixed w-full z-50 bg-teal-900/90 backdrop-blur-md shadow-lg py-4 px-6 flex justify-between items-center text-white">
+        <span class="font-bold text-xl tracking-widest">REEM SKIN SPA</span>
+        <a href="#contacto" class="bg-teal-500 hover:bg-teal-400 px-6 py-2 rounded-full font-bold transition">Reservar</a>
+    </nav>
+
+    <!-- Hero -->
+    <header class="relative h-[80vh] flex items-center justify-center text-white">
+        <img src="{{ url_for('static', filename='fachada.jpg') }}" class="absolute inset-0 w-full h-full object-cover brightness-[0.4]">
+        <div class="relative z-10 text-center px-6">
+            <h1 class="text-6xl font-bold mb-4">Reem Skin Spa</h1>
+            <p class="text-2xl font-light">Tecnología de vanguardia para tu belleza.</p>
+        </div>
+    </header>
+
+    <!-- Galería Completa -->
+    <section class="py-20 px-6 bg-gradient-spa">
+        <h2 class="text-4xl font-bold text-center mb-16 text-teal-900">Nuestros Tratamientos</h2>
+        <div class="grid md:grid-cols-3 gap-8 max-w-7xl mx-auto">
+            <div class="group bg-white rounded-3xl shadow-xl overflow-hidden hover:-translate-y-4 transition duration-500 border border-teal-100">
+                <img src="{{ url_for('static', filename='limpiezaprofunda.jpg') }}" class="w-full h-64 object-cover">
+                <div class="p-6"><h3 class="text-xl font-bold mb-2">Limpieza Profunda</h3><p class="text-slate-600">Renueva tu piel eliminando impurezas.</p></div>
+            </div>
+            <div class="group bg-white rounded-3xl shadow-xl overflow-hidden hover:-translate-y-4 transition duration-500 border border-teal-100">
+                <img src="{{ url_for('static', filename='masajerelajante.jpg') }}" class="w-full h-64 object-cover">
+                <div class="p-6"><h3 class="text-xl font-bold mb-2">Masaje Relajante</h3><p class="text-slate-600">Un escape total para liberar tensiones.</p></div>
+            </div>
+            <div class="group bg-white rounded-3xl shadow-xl overflow-hidden hover:-translate-y-4 transition duration-500 border border-teal-100">
+                <img src="{{ url_for('static', filename='microneedling.jpg') }}" class="w-full h-64 object-cover">
+                <div class="p-6"><h3 class="text-xl font-bold mb-2">Microneedling</h3><p class="text-slate-600">Estimula el colágeno natural.</p></div>
+            </div>
+            <div class="group bg-white rounded-3xl shadow-xl overflow-hidden hover:-translate-y-4 transition duration-500 border border-teal-100">
+                <img src="{{ url_for('static', filename='tratamientodermaplaning.jpg') }}" class="w-full h-64 object-cover">
+                <div class="p-6"><h3 class="text-xl font-bold mb-2">Dermaplaning</h3><p class="text-slate-600">Exfoliación precisa para rostro radiante.</p></div>
+            </div>
+            <div class="group bg-white rounded-3xl shadow-xl overflow-hidden hover:-translate-y-4 transition duration-500 border border-teal-100">
+                <img src="{{ url_for('static', filename='ultracavitacion+masaje.jpg') }}" class="w-full h-64 object-cover">
+                <div class="p-6"><h3 class="text-xl font-bold mb-2">Reducción Avanzada</h3><p class="text-slate-600">Ultracavitación y masaje para modelar tu figura.</p></div>
+            </div>
+            <div class="group bg-white rounded-3xl shadow-xl overflow-hidden hover:-translate-y-4 transition duration-500 border border-teal-100">
+                <img src="{{ url_for('static', filename='comboanticelulitis.jpg') }}" class="w-full h-64 object-cover">
+                <div class="p-6"><h3 class="text-xl font-bold mb-2">Combo Anticelulitis</h3><p class="text-slate-600">Tratamiento integral para mejorar la textura de tu piel.</p></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonios -->
+    <section class="py-20 bg-teal-900 text-white px-6">
+        <h2 class="text-4xl font-bold text-center mb-16">Lo que dicen nuestras clientas</h2>
+        <div class="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+            <div class="bg-white/5 p-8 rounded-3xl border border-white/10 hover:bg-white/10 transition"><p class="italic mb-4">"¡La mejor experiencia! Salí sintiéndome renovada."</p><span class="font-bold text-teal-300">— Ana García</span></div>
+            <div class="bg-white/5 p-8 rounded-3xl border border-white/10 hover:bg-white/10 transition"><p class="italic mb-4">"Profesionalismo puro. Resultados desde la primera sesión."</p><span class="font-bold text-teal-300">— Carla Mendoza</span></div>
+            <div class="bg-white/5 p-8 rounded-3xl border border-white/10 hover:bg-white/10 transition"><p class="italic mb-4">"Atención de primera, siempre muy puntuales."</p><span class="font-bold text-teal-300">— Valeria Ruiz</span></div>
+        </div>
+    </section>
+
+    <!-- Horarios y FAQ -->
+    <section class="py-20 px-6 bg-stone-100">
+        <div class="max-w-4xl mx-auto">
+            <h3 class="text-3xl font-bold text-center mb-10 text-teal-900">Horarios de Atención</h3>
+            <div class="bg-white p-8 rounded-3xl shadow-md text-center mb-20 space-y-2">
+                <p>Lunes a Viernes: 10:30 a.m. – 7 p.m.</p>
+                <p>Sábado: 11 a.m. – 4 p.m.</p>
+                <p class="font-bold text-red-600">Domingo: Cerrado</p>
+            </div>
+
+            <h2 class="text-4xl font-bold text-center mb-16 text-teal-900">Preguntas Frecuentes</h2>
+            <div class="space-y-6">
+                <div class="bg-white p-6 rounded-2xl shadow-sm border border-stone-200"><h4 class="font-bold text-lg">¿Tienen estacionamiento?</h4><p class="text-slate-600">Sí, contamos con estacionamiento seguro en Plaza Aves.</p></div>
+                <div class="bg-white p-6 rounded-2xl shadow-sm border border-stone-200"><h4 class="font-bold text-lg">¿Es necesario agendar cita?</h4><p class="text-slate-600">Sí, para brindarte una atención personalizada, trabajamos solo bajo cita.</p></div>
+                <div class="bg-white p-6 rounded-2xl shadow-sm border border-stone-200"><h4 class="font-bold text-lg">¿Aceptan tarjetas?</h4><p class="text-slate-600">¡Claro! Aceptamos todas las tarjetas de crédito y débito.</p></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Mapa -->
+    <section class="py-20 px-6 max-w-4xl mx-auto text-center" id="contacto">
+        <h3 class="font-bold text-2xl mb-4">Ubicación</h3>
+        <p class="mb-8 text-slate-600">Insurgentes 9, Plaza Aves, Centro Jiutepec, Local 4, 62550 Cuernavaca, Mor.</p>
+        <div class="rounded-3xl overflow-hidden shadow-lg border-4 border-white">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3774.200788647573!2d-99.20627522502685!3d18.897365656114175!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85cdde9520a32057%3A0xc3c9454174d89856!2sReem%20Skin%20Spa!5e0!3m2!1ses-419!2smx!4v1718408000000!5m2!1ses-419!2smx" 
+            width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+        </div>
+    </section>
+
+    <!-- Footer con tu empresa -->
+    <footer class="py-12 bg-teal-950 text-white text-center">
+        <div class="flex justify-center gap-8 text-3xl mb-6">
+            <a href="https://www.instagram.com/reemskinspa" target="_blank" class="hover:text-teal-400"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.facebook.com/share/1LTYcW22d1/" target="_blank" class="hover:text-teal-400"><i class="fab fa-facebook"></i></a>
+        </div>
+        <p class="opacity-60 text-sm">Martrech Solutions SAS © 2026</p>
+    </footer>
+</body>
+</html>
